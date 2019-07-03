@@ -13,7 +13,7 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/ldj/library/debit")
+@RequestMapping("/library/debit")
 // 只要在@SessionAttributes注解的names属性里面列出的名字，那么最终就会自动存储到Session里面！
 @SessionAttributes(names = { "debitList" })
 public class DebitController {
@@ -54,7 +54,7 @@ public class DebitController {
 		libraryService.add(list, bookId);
 
 		// setViewName就跟原来的返回String相同
-		mav.setViewName("redirect:/ldj/library/debit/list");
+		mav.setViewName("redirect:/library/debit/list");
 		return mav;
 	}
 
@@ -69,6 +69,6 @@ public class DebitController {
 	@RequestMapping("remove/{id}")
 	public String remove(@PathVariable("id") String id, @SessionAttribute(name = "debitList") DebitList list) {
 		libraryService.remove(list, id);
-		return "redirect:/ldj/library/debit/list";
+		return "redirect:/library/debit/list";
 	}
 }

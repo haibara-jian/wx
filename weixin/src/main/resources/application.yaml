@@ -6,7 +6,7 @@ spring:
       # serverTimezone=CST 指定服务器的时区，CST（China Standard Time）
       url: jdbc:mysql://127.0.0.1:3306/wx?useSSL=false&serverTimezone=CST&allowPublicKeyRetrieval=true
       username: root
-      password: root
+      password: 1234
    redis:
       # 大家要把IP改为远程服务器的IP
       host: 127.0.0.1
